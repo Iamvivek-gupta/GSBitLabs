@@ -1,0 +1,25 @@
+
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th *ngFor="let head of header">{{ head }}</th>
+      </tr>
+    </thead>
+    <tbody>
+       <ng-container *ngFor='let datas of data'>
+           <ng-container *ngFor='let batter of datas.batters.batter'>
+            <tr *ngFor="let topping of datas.topping">
+              <td >{{datas.id}}</td>
+              <td >{{datas.type}}</td>
+              <td >{{datas.name}}</td>
+              <td >{{batter.type}}</td>
+              <td >{{topping.type}}</td>
+            </tr>
+           </ng-container>
+       </ng-container>
+        
+    </tbody>    
+  </table>
+</div>
